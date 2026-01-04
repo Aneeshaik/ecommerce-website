@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom'
 import blackLogo from '../assets/logo-black.png'
 import { MapPin, Search, ShoppingCart, CircleUserRound } from 'lucide-react'
 
+
 const Navbar = () => {
     return (
 
         <div className='w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
-    <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between h-16">
+    <div className="max-w-[1280px] mx-auto px-12 flex items-center justify-between h-16">
             <img src={blackLogo} alt="Wearly Logo" className="w-32 "/>
             <div className='relative w-125'>
                 <input 

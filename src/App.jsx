@@ -1,12 +1,18 @@
 import './App.css'
 import Navbar from './components/Navbar'
-
+import Categories from './components/categoriesBar.jsx';
 function App() {
 
   return (
-    <div className="max-w-[1280px] mx-auto px-6">
+   
+    <>
       <Navbar />
-    </div>
+
+      {/* Page content */}
+      <div className="pt-18">
+        <Categories />
+      </div>
+    </>
   )
 }
 
