@@ -2,12 +2,9 @@ import { Link } from 'react-router-dom'
 import blackLogo from '../assets/logo-black.png'
 import { MapPin, Search, ShoppingCart, CircleUserRound } from 'lucide-react'
 
-
 const Navbar = () => {
     return (
-
-        <div className='w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
-    <div className="max-w-[1280px] mx-auto px-12 flex items-center justify-between h-16">
+        <div className="w-full py-2 sticky top-0 z-50 flex items-center justify-between bg-white">
             <img src={blackLogo} alt="Wearly Logo" className="w-32 "/>
             <div className='relative w-125'>
                 <input 
@@ -19,32 +16,30 @@ const Navbar = () => {
                     <Search size={18}/>
                 </div>
             </div>
-            <div className='flex items-center gap-4'>
+            <div className='flex items-center gap-6'>
                 <div className='flex items-center gap-1'>
-                    <MapPin color='#91939B' />
+                    <MapPin className='text-black' />
                     <div className='flex flex-col items-start'>
-                        <p className='text-[#91939B] text-xs font-semibold'>Delivering to Bengaluru</p>
-                        <p className='text-[#535759] font-semibold text-xs'>Update Location</p>
+                        <p className='text-black/70 text-xs font-semibold'>Delivering to Bengaluru</p>
+                        <p className='text-black font-semibold text-xs'>Update Location</p>
                     </div>
                 </div>
                 <Link
                     to="/#"
                     className="flex items-center gap-1"
                 >
-                    <ShoppingCart color='#91939B' size={20} />
-                    <span className="text-sm font-medium text-[#535759]">Cart</span>
+                    <ShoppingCart size={20} className='text-black' />
+                    <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
                 <Link
                     to="/#"
                     className="flex items-center gap-1"
                 >
-                    <CircleUserRound color='#91939B' size={20} />
-                    <span className="text-sm font-medium text-[#535759]">Sign In</span>
+                    <CircleUserRound size={20} className='text-black' />
+                    <span className="text-sm font-medium text-black">Sign In</span>
                 </Link>
             </div>
         </div>
-        </div>
-     
     )
 }
 
