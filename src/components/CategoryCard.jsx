@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+
 const CategoryCard = ({ title, image }) => {
     return(
         <Link to="#">

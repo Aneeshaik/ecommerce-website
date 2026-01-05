@@ -1,5 +1,6 @@
 import {Heart} from "lucide-react";
 import shirtImage from '../assets/categories/shirts.png';
+
 const CategoriesSection2 = () => {
     return(
         <div className="flex flex-col gap-1 items-start">
@@ -8,9 +9,9 @@ const CategoriesSection2 = () => {
                     <Heart size={18} className="text-gray-700 hover:text-red-500" />
                 </div>
                 <img
-                src={shirtImage}
-                alt="Categories"
-                className="object-contain w-full h-full rounded-xl"
+                    src={shirtImage}
+                    alt="Categories"
+                    className="object-contain w-full h-full rounded-xl"
                 />
             </div>        
             <p className="text-black  font-semibold text-[18px]">Shirts</p>
