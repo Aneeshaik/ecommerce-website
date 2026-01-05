@@ -41,7 +41,7 @@ const categories = [
 
 const CategoriesSection = () => {
     return (
-        <div className='flex flex-col gap-4 my-4'>
+        <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-between'>
                 <p className='text-black font-semibold text-2xl'>Explore Popular Categories</p>
                 <button className='flex items-center text-[#018FFF] text-xs font-semibold cursor-pointer'>

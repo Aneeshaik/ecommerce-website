@@ -49,11 +49,11 @@ const products = [
   },
 ];
 
-const BestDeals = () => {
+const TopDeals = () => {
     return(
         <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-between'>
-                <p className='text-black font-semibold text-2xl'>Todays Best Deals For You!</p>
+                <p className='text-black font-semibold text-2xl'>Top Deals In</p>
                 <button className='flex items-center text-[#018FFF] text-xs font-semibold cursor-pointer'>
                     <span className='leading-none'>View All</span>
                     <ChevronRight size={16} />
@@ -70,4 +70,4 @@ const BestDeals = () => {
     )
 }
 
-export default BestDeals;
+export default TopDeals;
