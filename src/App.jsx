@@ -4,7 +4,7 @@ import CategoriesSection from './components/CategoriesSection.jsx';
 import Navbar from './components/Navbar'
 import Categories from './components/categoriesBar.jsx';
 import BestDeals from './components/BestDeals.jsx';
-import CategoriesSection2 from './components/CategoriesSection2.jsx';
+
 function App() {
 
   return (
@@ -15,7 +15,7 @@ function App() {
         <Carousel />
         <CategoriesSection />
         <BestDeals/>
-        <CategoriesSection2/>
+       
       </div>
     </div>
   )

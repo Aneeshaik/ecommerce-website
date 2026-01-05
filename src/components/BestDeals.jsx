@@ -1,5 +1,60 @@
 import { ChevronRight, Heart, Star } from 'lucide-react';
-import shirtImage from '../assets/categories/shirts.png';
+import ProductCard from './ProductCard.jsx';
+import Mobile from "../assets/products/mobile.jpg";
+import Shirt from "../assets/products/shirt.jpg";
+import Ring from "../assets/products/ring.jpg";
+import Sneakers from "../assets/products/sneakers.jpg";
+import Sofa from "../assets/products/sofa.jpg";
+
+export const products = [
+  {
+    id: 1,
+    title: "Men Shirt",
+    image: Shirt,
+    rating: 4.5,
+    reviews: 120,
+    price: 999,
+    currency: "INR",
+  },
+  {
+    id: 2,
+    title: "Mobile Phone",
+    image: Mobile,
+    rating: 4.6,
+    reviews: 340,
+    price: 15999,
+    currency: "INR",
+  },
+  {
+    id: 3,
+    title: "Ring",
+    image: Ring,
+    rating: 4.4,
+    reviews: 98,
+    price: 7999,
+    currency: "INR",
+  },
+  {
+    id: 4,
+    title: "Sneakers",
+    image: Sneakers,
+    rating: 4.7,
+    reviews: 210,
+    price: 2499,
+    currency: "INR",
+  },
+  {
+    id: 5,
+    title: "Sofa",
+    image: Sofa,
+    rating: 4.3,
+    reviews: 65,
+    price: 18999,
+    currency: "INR",
+  },
+];
+
+
 
 const BestDeals = () => {
     return(
@@ -14,99 +69,9 @@ const BestDeals = () => {
             <div style={{
                 scrollbarWidth: 'none'
             }} className='flex gap-14 items-center overflow-x-auto'>
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-700 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black  font-semibold text-[18px]">Shirts</p>
-                </div>
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-700 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black font-semibold text-[18px]">Shirts</p>
-                </div>
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-700 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black font-semibold text-[18px]">Shirts</p>
-                </div>
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-700 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black font-semibold text-[18px]">Shirts</p>
-                </div>
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-700 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black font-semibold text-[18px]">Shirts</p>
-                </div>
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-700 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black font-semibold text-[18px]">Shirts</p>
-                </div>
-
-                <div className="flex flex-col gap-1 items-start">
-                    <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">
-                        <div className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow hover:scale-110 transition cursor-pointer">
-                            <Heart size={18} className="text-gray-1200 hover:text-red-500" />
-                        </div>
-                        <img
-                            src={shirtImage}
-                            alt="Categories"
-                            className="object-contain w-full h-full rounded-xl"
-                        />
-                    </div>
-                    <p className="text-black font-semibold text-[18px]">Shirts</p>
-                    <Star />
-                </div>
+                {products.map((product) => (
+                     <ProductCard key={product.id} product={product} />
+                ))}
             </div>
         </div>
     )
