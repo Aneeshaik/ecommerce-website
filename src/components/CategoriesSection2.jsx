@@ -1,6 +1,6 @@
 import {Heart} from "lucide-react";
 import shirtImage from '../assets/categories/shirts.png';
-function CategoriesSection2(){
+const CategoriesSection2 = () => {
     return(
         <div className="flex flex-col gap-1 items-start">
             <div className="relative bg-[#e4e6ee] w-44 h-44 rounded-xl flex items-center justify-center">

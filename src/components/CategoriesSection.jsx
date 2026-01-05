@@ -6,8 +6,7 @@ import Groceries from "../assets/categories/groceries.jpg";
 import HealthBeauty from "../assets/categories/health&beauty.jpg";
 import HomeDecor from "../assets/categories/homedecor.jpg";
 import Luxury from "../assets/categories/luxury.jpg";
-
-export const categories = [
+const categories = [
   {
     id: 1,
     title: "Electronics",
@@ -51,18 +50,15 @@ const CategoriesSection = () => {
                 </button>
             </div>
             <div style={{
-                scrollbarWidth: 'none'
+              scrollbarWidth: 'none'
             }} className='flex gap-14 items-center overflow-x-auto'>
-                
-                {categories.map((item) => (
-          <CategoryCard
-            key={item.id}
-            title={item.title}
-            image={item.image}
-          />
-        ))}
-                
-              
+              {categories.map((item) => (
+                <CategoryCard
+                  key={item.id}
+                  title={item.title}
+                  image={item.image}
+                />
+              ))}
             </div>
         </div>
     )
