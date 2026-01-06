@@ -11,7 +11,7 @@ import BestSellers from './components/BestSellers.jsx';
 function App() {
 
   return (
-    <div className='flex flex-col h-screen mx-32'>
+    <div className='flex flex-col mx-32' >
       <Navbar />
       <div className='flex-1 flex flex-col gap-6'>
         <CategoriesBar />
@@ -27,4 +27,5 @@ function App() {
 }
 
 export default App
+//'
 
