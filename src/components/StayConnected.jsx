@@ -1,3 +1,8 @@
+import facebook from "../assets/footer/facebook.jpg";
+import instagram from "../assets/footer/instagram.jpg";
+import linkedin from "../assets/footer/linkedin.jpg";
+import youtube from "../assets/footer/youtube.jpg";
+
 const StayConnected = () => {
   return (
     <div className="text-left">
@@ -6,21 +11,19 @@ const StayConnected = () => {
       </h3>
 
       <div className="flex gap-3">
-        <span className="w-9 h-9 flex items-center justify-center rounded-full border bg-white">
-          F
-        </span>
-        <span className="w-9 h-9 flex items-center justify-center rounded-full border bg-white">
-          X
-        </span>
-        <span className="w-9 h-9 flex items-center justify-center rounded-full border bg-white">
-          IG
-        </span>
-        <span className="w-9 h-9 flex items-center justify-center rounded-full border bg-white">
-          IN
-        </span>
-        <span className="w-9 h-9 flex items-center justify-center rounded-full border bg-white">
-          TT
-        </span>
+        <div className="h-10 w-10">
+          <img src={facebook} alt="facebook" className="w-full h-fullobject-contain" />
+        </div>
+        <div className="h-10 w-10">
+          <img src={instagram} alt="instagram" className="w-full h-full object-contain"/>
+        </div>
+        <div className="h-10 w-10">
+          <img src={linkedin} alt="linkedin" className="w-full h-full object-contain"/>
+        </div>
+        <div className="h-10 w-10">
+          <img src={youtube} alt="youtube" className="w-full h-full object-contain"/>
+        </div>
+        
       </div>
     </div>
   );

@@ -161,7 +161,8 @@ const FooterSection = () => {
               Popular Categories
             </h3>
             <ul className="space-y-2">
-              <li>Check order status</li>
+              <li>Check order 
+                status</li>
               <li>Shipping, Delivery & Pickup</li>
               <li>Returns & Exchanges</li>
               <li>Price Match Guarantee</li>
@@ -196,13 +197,13 @@ const FooterSection = () => {
         </div>
       </div>
         <div className="border-t border-gray-200 bg-[#f6f7f9]">
-  <div className="max-w-[1280px] mx-auto px-4 py-4 flex items-center justify-between text-sm text-gray-500">
+  <div className="max-w-[1280px] mx-auto  py-4 flex items-center justify-between text-sm text-gray-500">
     
     {/* Left */}
     <p>© Emox All Rights Reserved.</p>
 
     {/* Right */}
-    <div className="flex gap-6">
+    <div className="flex gap-2">
       <a href="#" className="hover:text-gray-700">Privacy Policy</a>
       <a href="#" className="hover:text-gray-700">Terms of Use</a>
       <a href="#" className="hover:text-gray-700">Warranty Policy</a>
