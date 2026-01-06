@@ -7,6 +7,7 @@ import BestDeals from './components/BestDeals.jsx';
 import OfferDeals from './components/OfferDeals.jsx';
 import TopDeals from './components/TopDeals.jsx';
 import BestSellers from './components/BestSellers.jsx';
+import FooterSection from './components/FooterSection.jsx';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <OfferDeals />
         <TopDeals />
         <BestSellers />
+        <FooterSection />
       </div>
     </div>
   )
