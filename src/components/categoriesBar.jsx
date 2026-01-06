@@ -13,7 +13,7 @@ const CategoriesBar = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between h-12 text-sm font-medium text-gray-700">
+    <div className="flex items-center justify-between text-sm font-medium text-gray-700">
       {/* LEFT SIDE */}
       <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap">
         <button

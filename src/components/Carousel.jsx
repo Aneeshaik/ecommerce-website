@@ -22,11 +22,11 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl mb-6">
+    <div className="relative w-full overflow-hidden rounded-2xl">
       <img
         src={images[currentIndex]}
         alt="Carousel"
-        className="w-full h-[400px] object-cover transition-all duration-700"
+        className="w-full h-100 object-cover transition-all duration-700"
       />
 
       {/* Dots Indicator */}
