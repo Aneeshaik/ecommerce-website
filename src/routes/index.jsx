@@ -2,7 +2,5 @@ import { useRoutes } from "react-router-dom"
 import { routes } from "./routes"
 
 export default function AppRoutes() {
-    const element = useRoutes(routes);
-    console.log('element:', element);
-    return element
+    return useRoutes(routes);
 }
