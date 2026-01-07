@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import img1 from "../assets/carousel/watches_banner.jpg";
-import img2 from "../assets/carousel/mobilebanner.jpg";
-import img3 from "../assets/carousel/mobileaccessories.jpg";
-import img4 from "../assets/carousel/salebanner.jpg";
+import img1 from "../assets/carousel/first-image.jpg";
+import img2 from "../assets/carousel/second-image.jpg";
+import img3 from "../assets/carousel/third-image.jpg";
+import img4 from "../assets/carousel/fourth-image.jpg";
 
 const images = [img1, img2, img3, img4];
 
@@ -26,7 +26,7 @@ const Carousel = () => {
       <img
         src={images[currentIndex]}
         alt="Carousel"
-        className="w-full h-100 object-cover transition-all duration-700"
+        className="w-full transition-all duration-700"
       />
 
       {/* Dots Indicator */}
