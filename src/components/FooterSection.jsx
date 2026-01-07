@@ -25,21 +25,6 @@ const features = [
 
 const FooterSection = () => {
   return (
-<<<<<<< HEAD
-    <footer className="w-full bg-[#f6f7f9]">
-      
-      {/* TOP FEATURES */}
-      <div className=" mx-auto px-4 py-4 flex flex-row justify-between gap-6">
-        {features.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={index}
-              className="flex items-center gap-4 bg-white rounded-xl p-3 shadow-sm"
-            >
-              <div className="text-blue-600">
-                <Icon size={28} />
-=======
     <footer className="w-full bg-[#f6f7f9] mt-6">
       <div className="mx-32">
         <div className="px-4 py-4 flex flex-row justify-between gap-6">
@@ -62,7 +47,7 @@ const FooterSection = () => {
                     {item.subtitle}
                   </p>
                 </div>
->>>>>>> 75d5888cfec9f37b638afc05bdad9aaeb84438af
+
               </div>
             );
           })}
