@@ -32,7 +32,7 @@ const StarRating = ({ rating = 0, reviews = 0, max = 5 }) => {
   return (
     <div className="flex items-center gap-1 text-sm">
       {[...Array(max)].map((_, index) => {
-        const fill = Math.max(0, Math.min(1, rating - index)) * 100;
+        const fill =  Math.max(0,Math.min(1, rating - index) )* 100;
 
         return (
           <div key={index} className="relative w-4 h-4">

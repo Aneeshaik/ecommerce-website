@@ -1,42 +1,63 @@
 import { ChevronRight } from 'lucide-react';
 import CategoryCard from "./CategoryCard.jsx";
-import Electronics from "../assets/categories/electronics.jpg";
-import Fashion from "../assets/categories/fashion.jpg";
-import Groceries from "../assets/categories/groceries.jpg";
-import HealthBeauty from "../assets/categories/health&beauty.jpg";
-import HomeDecor from "../assets/categories/homedecor.jpg";
-import Luxury from "../assets/categories/luxury.jpg";
+import mobile from "../assets/categories/mobile.jpg";
+import laptops from "../assets/categories/laptops.jpg";
+import tv from "../assets/categories/tv.jpg";
+import home_appli from "../assets/categories/home_appli.jpg";
+import kitchen_devices from "../assets/categories/kitchen_devices.jpg";
+import wearables from "../assets/categories/wearables.jpg";
+import cameras from "../assets/categories/cameras.jpg";
+import security from "../assets/categories/security.jpg";
+import gaming from "../assets/categories/gaming.jpg";
+import audio_devices from "../assets/categories/audio_devices.jpg";
+
 const categories = [
   {
     id: 1,
-    title: "Electronics",
-    image: Electronics,
+    title: "Mobile & Accessories",
+    image: mobile,
   },
   {
     id: 2,
-    title: "Fashion",
-    image: Fashion,
+    title: "Computers & Laptops",
+    image: laptops,
   },
   {
     id: 3,
-    title: "Groceries",
-    image: Groceries,
+    title: "TV, Audio & Entertainment",
+    image: tv,
   },
   {
     id: 4,
-    title: "Health & Beauty",
-    image: HealthBeauty,
+    title: "Home Appliances",
+    image: home_appli,
   },
   {
     id: 5,
-    title: "Home Decor",
-    image: HomeDecor,
+    title: "Kitchen Appliances",
+    image: kitchen_devices,
   },
   {
     id: 6,
-    title: "Luxury",
-    image: Luxury,
+    title: "Gaming & Accessories",
+    image: gaming,
   },
+  {
+    id: 7,
+    title: "Wearables & Smart Devices",
+    image: wearables,
+  },
+  {
+    id: 8,
+    title: "Cameras & Imaging",
+    image: cameras,
+  },
+  {
+    id: 9,
+    title: "Smart Home & Security",
+    image: security,
+  }
+
 ];
 
 const CategoriesSection = () => {
@@ -51,7 +72,7 @@ const CategoriesSection = () => {
             </div>
             <div style={{
               scrollbarWidth: 'none'
-            }} className='flex gap-14 items-center overflow-x-auto'>
+            }} className='flex gap-14 items-center  overflow-x-auto'>
               {categories.map((item) => (
                 <CategoryCard
                   key={item.id}

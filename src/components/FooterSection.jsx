@@ -93,7 +93,7 @@ const FooterSection = () => {
     <footer className="w-full bg-[#f6f7f9]">
       
       {/* TOP FEATURES */}
-      <div className="max-w-[1280px] mx-auto px-4 py-4 flex flex-row justify-between gap-6">
+      <div className=" mx-auto px-4 py-4 flex flex-row justify-between gap-6">
         {features.map((item, index) => {
           const Icon = item.icon;
           return (
