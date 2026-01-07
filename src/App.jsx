@@ -1,33 +1,15 @@
 import './App.css'
-import Carousel from './components/Carousel.jsx';
-import CategoriesSection from './components/CategoriesSection.jsx';
-import Navbar from './components/Navbar'
-import CategoriesBar from './components/categoriesBar.jsx';
-import BestDeals from './components/BestDeals.jsx';
-import OfferDeals from './components/OfferDeals.jsx';
-import TopDeals from './components/TopDeals.jsx';
-import BestSellers from './components/BestSellers.jsx';
-import FooterSection from './components/FooterSection.jsx';
+import AppRoutes from './routes/index.jsx';
+import { Suspense } from 'react';
 
 function App() {
 
   return (
-    <div className='flex flex-col mx-32' >
-      <Navbar />
-      <div className='flex-1 flex flex-col gap-6'>
-        <CategoriesBar />
-        <Carousel />
-        <CategoriesSection />
-        <BestDeals />
-        <OfferDeals />
-        <TopDeals />
-        <BestSellers />
-        <FooterSection />
-      </div>
-    </div>
+    <Suspense fallback={<div className='text-black'>Loading...</div>}>
+      <AppRoutes />
+    </Suspense>
   )
 }
 
 export default App
-//'
 

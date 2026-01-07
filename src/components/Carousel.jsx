@@ -22,19 +22,19 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl mb-6">
+    <div className="relative w-full overflow-hidden rounded-2xl">
       <img
         src={images[currentIndex]}
         alt="Carousel"
-        className="w-full h-[400px] object-cover transition-all duration-700"
+        className="w-full h-100 object-cover transition-all duration-700"
       />
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <span
             key={index}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-2 h-2 rounded-full ${
               currentIndex === index
                 ? "bg-white"
                 : "bg-white/50"

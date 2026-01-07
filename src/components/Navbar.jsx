@@ -4,7 +4,7 @@ import { MapPin, Search, ShoppingCart, CircleUserRound } from 'lucide-react'
 
 const Navbar = () => {
     return (
-        <div className="w-full py-2 sticky top-0 z-50 flex items-center justify-between bg-white">
+        <div className="py-2 sticky top-0 z-50 flex items-center justify-between bg-white mx-32">
             <img src={blackLogo} alt="Wearly Logo" className="w-32 "/>
             <div className='relative w-125'>
                 <input 

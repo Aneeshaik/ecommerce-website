@@ -59,9 +59,11 @@ const TopDeals = () => {
                     <ChevronRight size={16} />
                 </button>
             </div>
-            <div style={{
-                scrollbarWidth: 'none'
-            }} className='flex gap-6 items-center overflow-x-auto'>
+            <div className='grid w-full gap-6
+                grid-cols-2
+                sm:grid-cols-3
+                md:grid-cols-4
+                lg:grid-cols-5'>
                 {products.map((product) => (
                      <ProductCard key={product.id} product={product} />
                 ))}
