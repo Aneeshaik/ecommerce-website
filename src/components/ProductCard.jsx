@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
   } = product;
 
   return (
-    <Link to="#" className="flex flex-col items-start gap-2 w-full h-auto">
+    <Link to="/productDetails" className="flex flex-col items-start gap-2 w-full h-auto">
       <div className="relative w-full h-52 rounded-xl flex items-center justify-center">
         <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer group">
           <Heart
