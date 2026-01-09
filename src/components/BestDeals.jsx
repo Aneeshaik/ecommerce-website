@@ -1,7 +1,7 @@
 import { ChevronRight, Heart, Star } from 'lucide-react';
 import ProductCard from './ProductCard.jsx';
 import Mobile from "../assets/products/mobile.jpg";
-import Shirt from "../assets/products/shirt.jpg";
+import watch from "../assets/products/watch.png";
 import Ring from "../assets/products/ring.jpg";
 import Sneakers from "../assets/products/sneakers.jpg";
 import Sofa from "../assets/products/sofa.jpg";
@@ -9,8 +9,8 @@ import Sofa from "../assets/products/sofa.jpg";
 const products = [
   {
     id: 1,
-    title: "Men Shirt",
-    image: Shirt,
+    title: "LONGBO zenith Diamond Alalog watch for men",
+    image: watch,
     rating: 4.5,
     reviews: 120,
     price: 999,

@@ -25,7 +25,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <Link
-                    to="/#"
+                    to="/cart"
                     className="flex items-center gap-1"
                 >
                     <ShoppingCart size={20} className='text-black' />

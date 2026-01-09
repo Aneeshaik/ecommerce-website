@@ -14,7 +14,11 @@ const ProductCard = ({ product }) => {
   } = product;
 
   return (
-    <Link to="/productDetails" className="flex flex-col items-start gap-2 w-full h-auto">
+    <Link 
+      to="/productDetails" 
+      state={{ product }}
+      className="flex flex-col items-start gap-2 w-full h-auto"
+    >
       <div className="relative w-full h-52 rounded-xl flex items-center justify-center">
         <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer group">
           <Heart
@@ -29,7 +33,7 @@ const ProductCard = ({ product }) => {
         />
       </div>
       <div className="flex flex-col items-start w-full space-y-1">
-        <p className="text-base font-semibold text-gray-900 line-clamp-2">{title}</p>
+        <p className="text-base font-semibold text-gray-900 line-clamp-2">{title.slice(0,20)}{title.length > 20 && '...'}</p>
         <StarRating rating={rating} reviews={reviews} />
         <div className="flex items-center gap-2">
           <p className="font-semibold text-black">
