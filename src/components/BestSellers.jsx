@@ -10,7 +10,7 @@ const products = [
   {
     id: 1,
     title: "Men Shirt",
-    image: Shirt,
+    image: [Shirt,Shirt],
     rating: 4.5,
     reviews: 120,
     price: 999,
@@ -18,7 +18,7 @@ const products = [
   {
     id: 2,
     title: "Mobile Phone",
-    image: Mobile,
+    image: [Mobile,Mobile],
     rating: 4.6,
     reviews: 340,
     price: 15999,
@@ -26,7 +26,7 @@ const products = [
   {
     id: 3,
     title: "Ring",
-    image: Ring,
+    image: [Ring,Ring],
     rating: 1.4,
     reviews: 98,
     price: 7999,
@@ -34,7 +34,7 @@ const products = [
   {
     id: 4,
     title: "Sneakers",
-    image: Sneakers,
+    image: [Sneakers,Sneakers],
     rating: 2.7,
     reviews: 210,
     price: 2499,
@@ -42,7 +42,7 @@ const products = [
   {
     id: 5,
     title: "Sofa",
-    image: Sofa,
+    image: [Sofa,Sofa],
     rating: 3.3,
     reviews: 65,
     price: 18999,

@@ -13,6 +13,7 @@ const ProductCard = ({ product }) => {
     currency,
   } = product;
 
+  
   return (
     <Link 
       to="/productDetails" 
@@ -27,7 +28,7 @@ const ProductCard = ({ product }) => {
           />
         </div>
         <img
-          src={image}
+          src={image[0]}
           alt={title}
           className="object-contain w-full h-full rounded-xl bg-[#F2F3F9]"
         />
