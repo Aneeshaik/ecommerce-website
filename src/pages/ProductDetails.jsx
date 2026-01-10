@@ -18,15 +18,15 @@ const ProductDetails = () => {
     }, [])
 
     return (
-        <div className="flex gap-20 w-full text-black my-4">
-            <div className="relative w-[50%] bg-[#F2F3F9] flex justify-center items-center rounded-2xl">
+        <div className="flex gap-20 w-full text-black my-4 min-h-screen">
+            <div className="relative w-[50%] h-[70%] bg-[#F2F3F9] flex justify-center items-center rounded-2xl">
                 <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow cursor-pointer group">
                     <Heart
                         size={18}
                         className="text-gray-700 group-hover:text-red-500 group-hover:fill-red-500 transition"
                     />
                 </div>
-                <img src={image} alt={title} className="w-96 object-contain p-4"/>
+                <img src={image} alt={title} className="w-96 h-full object-contain p-4"/>
             </div>
             <div className="flex flex-col items-start gap-4 w-[50%]">
                 <div className="flex flex-col items-start">
