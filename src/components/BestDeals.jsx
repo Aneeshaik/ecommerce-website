@@ -11,7 +11,7 @@ const products = [
   {
     id: 1,
     title: "LONGBO zenith Diamond Alalog watch for men",
-    image: [watch,Mobile],
+    images: [watch, Mobile],
     rating: 4.5,
     reviews: 120,
     price: 999,
@@ -19,7 +19,7 @@ const products = [
   {
     id: 2,
     title: "Apple iphone 15(128 GB) - Green",
-    image: [Mobile, Mobile],
+    images: [Mobile, Mobile],
     rating: 4.5,
     reviews: 9.8,
     price: 54790,
@@ -27,7 +27,7 @@ const products = [
   {
     id: 3,
     title: "Dell 15, Intel Core i3 13th Gen - 1305U, 16 GB:DDR4 RAM, 512GB, FHD 15.6 /39.6 cm Narrow Border Display, Windows 11, Office H&S 2024, Carbon Grey, Intel UHD Graphics, 1.66 Kg Thin & Light Laptop",
-    image: [laptop, laptop],
+    images: [laptop, laptop],
     rating: 3.9,
     reviews: 231,
     price: 40990,
@@ -35,7 +35,7 @@ const products = [
   {
     id: 4,
     title: "Sneakers",
-    image: [Sneakers,Sneakers],
+    images: [Sneakers, Sneakers],
     rating: 2.7,
     reviews: 210,
     price: 2499,
@@ -43,7 +43,7 @@ const products = [
   {
     id: 5,
     title: "Sofa",
-    image: [Sofa,Sneakers],
+    images: [Sofa, Sneakers],
     rating: 3.3,
     reviews: 65,
     price: 18999,

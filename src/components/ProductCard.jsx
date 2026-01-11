@@ -5,7 +5,7 @@ import StarRating from "./StarRating";
 const ProductCard = ({ product }) => {
   const {
     title,
-    image,
+    images,
     rating,
     reviews,
     price,
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
           />
         </div>
         <img
-          src={image[0]}
+          src={images[0]}
           alt={title}
           className="object-contain w-full h-full rounded-xl bg-[#F2F3F9]"
         />

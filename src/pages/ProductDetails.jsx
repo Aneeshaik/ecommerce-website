@@ -1,101 +1,3 @@
-{/*import { Heart, Star } from "lucide-react";
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-
-const ProductDetails = () => {
-  const { state } = useLocation();
-  const product = state?.product;
-
-  const [showImage, setShowImage] = useState(false);
-
-  if (!product) return null;
-
-  const {
-    title,
-    image,
-    rating,
-    reviews,
-    price,
-  } = product;
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <>
-      
-      <div className="flex gap-20 w-full text-black my-4 min-h-screen">
-        <div className="relative w-[50%] h-[70%] bg-[#F2F3F9] flex justify-center items-center rounded-2xl">
-          <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow cursor-pointer group">
-            <Heart
-              size={18}
-              className="text-gray-700 group-hover:text-red-500 group-hover:fill-red-500 transition"
-            />
-          </div>
-
-          <img
-            src={image}
-            alt={title}
-            className="w-96 h-full object-contain p-4 cursor-zoom-in"
-            onClick={() => setShowImage(true)}
-          />
-        </div>
-        <div className="flex flex-col items-start gap-4 w-[50%]">
-          <div className="flex flex-col items-start">
-            <p className="text-2xl font-semibold mt-4">{title}</p>
-
-            <div className="flex items-center gap-1">
-              <Star size={16} className="fill-[#018FFF] text-[#018FFF]" />
-              <p>{rating}</p>
-              <p>({reviews})</p>
-            </div>
-          </div>
-
-          <p className="font-semibold text-3xl text-black">
-            &#8377;{price}
-          </p>
-
-          <Link
-            to="/cart"
-            state={{ product }}
-            className="bg-[#018FFF] w-full text-white p-2 rounded-3xl cursor-pointer text-center"
-          >
-            Add to cart
-          </Link>
-        </div>
-      </div>
-
-     
-      {showImage && (
-        <div
-          className="fixed inset-0 bg-black flex items-center justify-center z-[999]"
-          onClick={() => setShowImage(false)}
-        >
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-contain cursor-zoom-out"
-            onClick={(e) => e.stopPropagation()}
-          />
-
-          <button
-            className="absolute top-6 right-6  text-3xl font-bold"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowImage(false);
-            }}
-          >
-            ✕
-          </button>
-        </div>
-      )}
-    </>
-  );
-};
-
-export default ProductDetails;
-*/}
 import { Heart, Star } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -104,35 +6,30 @@ const ProductDetails = () => {
   const { state } = useLocation();
   const product = state?.product;
 
-  const [activeImage, setActiveImage] = useState("");
-  const [previewImage, setPreviewImage] = useState(null);
-
-  if (!product) return null;
-
   const {
     title,
-    image, // 👈 ARRAY of images
+    images,
     rating,
     reviews,
     price,
   } = product;
 
+  const [activeImage, setActiveImage] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveImage(image[0]); // default image
-  }, [image]);
+    setActiveImage(images[0]);
+  }, [images]);
+
+  if (!product) return null;
 
   return (
     <>
-      {/* MAIN CONTENT */}
       <div className="flex gap-16 w-full text-black my-4 min-h-screen">
-
-        {/* IMAGE SECTION */}
-        <div className="flex gap-4 w-[50%]">
-
-          {/* SIDE THUMBNAILS */}
-          <div className="flex flex-col gap-3">
-            {image.map((img, index) => (
+        <div className="grid grid-cols-[auto_1fr] gap-4">
+          <div className="flex flex-col gap-3 w-24">
+            {images?.map((img, index) => (
               <img
                 key={index}
                 src={img}
@@ -145,8 +42,7 @@ const ProductDetails = () => {
             ))}
           </div>
 
-          {/* MAIN IMAGE */}
-          <div className="relative flex-1 bg-[#F2F3F9] flex justify-center items-center rounded-2xl">
+          <div className="relative bg-[#F2F3F9] flex justify-center items-center rounded-2xl w-full aspect-square  max-w-75 sm:max-w-95 md:max-w-110 lg:max-w-150">
             <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow cursor-pointer group">
               <Heart
                 size={18}
@@ -157,15 +53,16 @@ const ProductDetails = () => {
             <img
               src={activeImage}
               alt={title}
-              className="w-96 h-full object-contain p-4 cursor-zoom-in"
+              className="w-full h-full object-contain p-4 cursor-zoom-in"
               onClick={() => setPreviewImage(activeImage)}
             />
           </div>
         </div>
 
+
         {/* DETAILS SECTION */}
-        <div className="flex flex-col items-start gap-4 w-[50%]">
-          <p className="text-2xl font-semibold mt-4">{title}</p>
+        <div className="flex flex-col items-start gap-4">
+          <p className="text-left text-2xl font-semibold mt-4">{title}</p>
 
           <div className="flex items-center gap-1">
             <Star size={16} className="fill-[#018FFF] text-[#018FFF]" />
@@ -213,10 +110,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-
-{ /*<img
-              src={activeImage}
-              alt={title}
-              className="w-96 h-full object-contain p-4 cursor-zoom-in"
-              onClick={() => setShowImage(true)}
-            />*/}

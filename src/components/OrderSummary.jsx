@@ -1,6 +1,8 @@
 const OrderSummary = () => {
     return (
-        <div></div>
+        <div>
+           <p>Order Summary</p> 
+        </div>
     )
 }
 
