@@ -1,10 +1,12 @@
 import { ChevronRight, Heart, Star } from 'lucide-react';
+import {Link} from 'react-router-dom';
 import ProductCard from './ProductCard.jsx';
 import Mobile from "../assets/products/mobile.jpg";
 import Shirt from "../assets/products/shirt.jpg";
 import Ring from "../assets/products/ring.jpg";
 import Sneakers from "../assets/products/sneakers.jpg";
 import Sofa from "../assets/products/sofa.jpg";
+
 
 const products = [
   {
@@ -55,15 +57,12 @@ const TopDeals = () => {
             <div className='flex items-center justify-between'>
                 <p className='text-black font-semibold text-2xl'>Top Deals In</p>
                 <button className='flex items-center text-[#018FFF] text-xs font-semibold cursor-pointer'>
-                    <span className='leading-none'>View All</span>
+                    <Link to="/allproductsdetails" state={{products,title:"Top Deals In"}}><span className='leading-none' >View All</span></Link>
+                    
                     <ChevronRight size={16} />
                 </button>
             </div>
-            <div className='grid w-full gap-6
-                grid-cols-2
-                sm:grid-cols-3
-                md:grid-cols-4
-                lg:grid-cols-5'>
+            <div className='grid w-full gap-6 -cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
                 {products.map((product) => (
                      <ProductCard key={product.id} product={product} />
                 ))}
@@ -73,3 +72,4 @@ const TopDeals = () => {
 }
 
 export default TopDeals;
+//

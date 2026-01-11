@@ -1,4 +1,4 @@
-import { Heart, Star } from "lucide-react";
+import { Heart,  } from "lucide-react";
 import { Link } from "react-router-dom";
 import StarRating from "./StarRating";
 

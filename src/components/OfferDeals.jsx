@@ -1,4 +1,5 @@
 import { ChevronRight, Heart, Star } from 'lucide-react';
+import {Link} from "react-router-dom"
 import ProductCard from './ProductCard.jsx';
 import Mobile from "../assets/products/mobile.jpg";
 import Shirt from "../assets/products/shirt.jpg";
@@ -55,12 +56,12 @@ const OfferDeals = () => {
             <div className='flex items-center justify-between'>
                 <p className='text-black font-semibold text-2xl'>60% Off Or More</p>
                 <button className='flex items-center text-[#018FFF] text-xs font-semibold cursor-pointer'>
-                    <span className='leading-none'>View All</span>
+                    <Link to="/allproductsdetails" state={{products,title:"60% Off Or More"}}><span className='leading-none' >View All</span></Link>
                     <ChevronRight size={16} />
                 </button>
             </div>
             <div className='grid w-full gap-6
-                grid-cols-2
+                -cols-2
                 sm:grid-cols-3
                 md:grid-cols-4
                 lg:grid-cols-5'>
