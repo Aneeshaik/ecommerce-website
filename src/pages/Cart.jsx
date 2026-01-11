@@ -10,8 +10,8 @@ const Cart = () => {
         <div className="my-4 min-h-screen">
             <div className="text-black text-left text-2xl font-semibold">Shopping Cart</div>
             <div className="flex items-start gap-3 mt-4">
-                <CartCard product={product} />
-                <OrderSummary />
+                <CartCard product={ product } />
+                <OrderSummary product={ product }/>
             </div>
         </div>
     )
