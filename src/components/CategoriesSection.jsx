@@ -7,12 +7,13 @@ import laptopAccessories from "../assets/categories/laptop-accessories.png";
 import mobileAccessories from "../assets/categories/mobile-accessories.png";
 import bluetooth from "../assets/categories/bluetooth.png";
 import wallClock from "../assets/categories/wall-clock.png";
-
+import watches from "../assets/data/watches.js"
 const categories = [
   {
     id: 1,
     title: "Watches",
     image: wearables,
+    products: watches,
   },
   {
     id: 2,
@@ -64,6 +65,7 @@ const CategoriesSection = () => {
                   key={item.id}
                   title={item.title}
                   image={item.image}
+                  products={item.products || []}
                 />
               ))}
             </div>
