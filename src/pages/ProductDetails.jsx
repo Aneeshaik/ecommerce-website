@@ -42,8 +42,8 @@ const ProductDetails = () => {
             ))}
           </div>
 
-          <div className="relative bg-[#F2F3F9] flex justify-center items-center rounded-2xl w-full aspect-square  max-w-75 sm:max-w-95 md:max-w-110 lg:max-w-150">
-            <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow cursor-pointer group">
+          <div className="relative bg-[#F2F3F9] flex justify-center items-center rounded-2xl   ">
+            <div className="absolute top-3 right-3 bg-white  rounded-full shadow cursor-pointer group">
               <Heart
                 size={18}
                 className="text-gray-700 group-hover:text-red-500 group-hover:fill-red-500 transition"
@@ -53,7 +53,7 @@ const ProductDetails = () => {
             <img
               src={activeImage}
               alt={title}
-              className="w-full h-full object-contain p-4 cursor-zoom-in"
+              className="w-[50%]  object-cover  cursor-zoom-in"
               onClick={() => setPreviewImage(activeImage)}
             />
           </div>
@@ -61,7 +61,7 @@ const ProductDetails = () => {
 
 
         {/* DETAILS SECTION */}
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start w-[50%] gap-4">
           <p className="text-left text-2xl font-semibold mt-4">{title}</p>
 
           <div className="flex items-center gap-1">
@@ -73,7 +73,7 @@ const ProductDetails = () => {
           <p className="font-semibold text-3xl text-black">
             &#8377;{price}
           </p>
-
+            
           <Link
             to="/cart"
             state={{ product }}
