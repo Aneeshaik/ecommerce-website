@@ -2,7 +2,10 @@ import { ChevronRight } from 'lucide-react';
 import CategoryCard from "./CategoryCard.jsx";
 import mobile from "../assets/categories/mobile.png";
 import laptops from "../assets/categories/laptop.png";
-import wearables from "../assets/categories/watch.png";
+import wearables from "../assets/categories/watches/watch.png";
+import watchAll from "../assets/categories/watches/watchAll.jpg";
+import watchMen from "../assets/categories/watches/watchMen.jpg";
+import watchWomen from "../assets/categories/watches/watchWomen.jpg";
 import laptopAccessories from "../assets/categories/laptop-accessories.png";
 import mobileAccessories from "../assets/categories/mobile-accessories.png";
 import bluetooth from "../assets/categories/bluetooth.png";
@@ -13,8 +16,19 @@ const categories = [
     id: 1,
     title: "Watches",
     image: wearables,
+    subcategories:[{
+      title:"All",
+      image:watchAll,
+    },{
+      title:"Men",
+      image:watchMen,
+    },{
+      title:"Women",
+      image:watchWomen,
+    },],
     products: watches,
   },
+
   {
     id: 2,
     title: "Mobile & Accessories",
@@ -66,6 +80,7 @@ const CategoriesSection = () => {
                   title={item.title}
                   image={item.image}
                   products={item.products || []}
+                  subcategories={item.subcategories}
                 />
               ))}
             </div>

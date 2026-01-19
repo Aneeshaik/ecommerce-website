@@ -1,6 +1,7 @@
-import watch1 from '../products/watches/watch1.jpg';
-import watch1_1 from '../products/watches/watch1_1.jpg';
-import watch1_2 from '../products/watches/watch1_2.jpg';
+import m1_1 from '../products/mobile/m1_1.jpg';
+import m1_2 from '../products/mobile/m1_2.jpg';
+import m1_3 from '../products/mobile/m1_3.jpg';
+
 import watch1_3 from '../products/watches/watch1_3.jpg';
 import watch1_4 from '../products/watches/watch1_4.jpg';
 import watch1_5 from '../products/watches/watch1_5.jpg';
@@ -43,15 +44,14 @@ import watch10_2 from '../products/watches/watch10_2.jpg';
 import watch10_3 from '../products/watches/watch10_3.jpg';
 
 
-const watches = [
+const mobile = [
     {
         id: 1,
-        title: "Noise Pro 6R 1.46\" AMOLED Smart Watch, 1000 NITS, Powered by AI Pro, Built-in GPS, Strava Integration, Stainless Steel Dial, Video Watch Faces, 3ATM, Emergency SOS, TWS Connectivity - Starlight Gold",
-        images: [watch1,watch1_1,watch1_2,watch1_3,watch1_4,watch1_5],
-        rating: 4.5,
-        reviews: 120,
-        price: 6999,
-        category:"Men"
+        title: "vivo X300 5G (Mist Blue, 12GB RAM, 256GB Storage) with No Cost EMI/Additional Exchange Offers",
+        images: [m1_1,m1_2,m1_3],
+        rating: 4.6,
+        reviews: 111,
+        price: 75998,
       },
       {
         id: 2,
@@ -60,7 +60,6 @@ const watches = [
         rating: 3.9,
         reviews: 1049,
         price: 1999,
-        category:"Men"
       },
       {
         id: 3,
@@ -69,7 +68,6 @@ const watches = [
         rating: 4.0,
         reviews: 153,
         price: 419,
-        category:"Men"
       },
       {
         id: 4,
@@ -78,53 +76,47 @@ const watches = [
         rating: 4.2,
         reviews: 398,
         price: 5805,
-        category:"Men"
       },
       {
         id: 5,
-        title: "Noise Twist Go Round dial Smartwatch with BT Calling, 1.39\" Display, Metal Build, 100+ Watch Faces, IP68, Sleep Tracking, 100+ Sports Modes, 24/7 Heart Rate Monitoring (Rose Pink) ",
+        title: "Titan Workwear Quartz Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
         images: [watch5_1,watch5_2,watch5_3],
-        rating: 3.9,
-        reviews: 50398,
-        price: 1499,
-        category:"Women"
+        rating: 4.2,
+        reviews: 398,
+        price: 5805,
       },
       {
         id: 6,
-        title: "Noise Pro 6 Smart Watch:Intelligent AI, Endless AI Watch Faces, AI Companion, 1.85” AMOLED, EN2 Processor, Nebula UI 2.0, Emergency SOS, Compatible with iOS & Android(Magnetic Lime) ",
+        title: "Titan Workwear Quartz Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
         images: [watch6_1,watch6_2,watch6_3],
-        rating: 4.0,
-        reviews: 23398,
-        price: 2899,
-        category:"Women"
+        rating: 4.2,
+        reviews: 398,
+        price: 5805,
       },
       {
         id: 7,
-        title: "Noise Endeavour Pro Outdoor Rugged Military Smart Watch, Titanium Alloy Bezel, Dual-Band GPS, 164ft Water Resistance, 28 Days Battery on Standby, AI Companion, for iOS & Android (Carbon Black)",
+        title: "Titan Workwear Quartz Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
         images: [watch7_1,watch7_2,watch7_3],
-        rating: 4.0,
-        reviews: 2336,
-        price: 9999,
-        category:"Men"
+        rating: 4.2,
+        reviews: 398,
+        price: 5805,
       },
 
       {
         id: 8,
-        title: "Google Pixel Watch 3 (45mm) 2024 Model - Android Smartwatch, Heart Rate Tracking, Fitbit Advanced Running, Fitness Insights, 24-Hour Battery - Matte Hazel Aluminum Case - Hazel Band - LTE ",
+        title: "Titan Workwear Quartz Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
         images: [watch8_1,watch8_2,watch8_3],
-        rating: 4.4,
-        reviews: 1798,
-        price: 3999,
-        category:"None"
+        rating: 4.2,
+        reviews: 398,
+        price: 5805,
       },
       {
         id: 9,
-        title: "Noise Colorfit Pro 5 Smart Watch 1.85\" AMOLED Display, BT Calling, New DIY Watch Faces, Smart Dock Design, Emergency SOS Tech, Emoji Support, 5X Faster Data Transfer, Instacharge?? (Starlight Gold) ",
+        title: "Titan Workwear Quartz Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
         images: [watch9_1,watch9_2,watch9_3],
-        rating: 4.0,
-        reviews: 12398,
-        price: 2999,
-        category:"None"
+        rating: 4.2,
+        reviews: 398,
+        price: 5805,
       },
       {
         id: 10,
@@ -133,9 +125,8 @@ const watches = [
         rating: 2.9,
         reviews: 7,
         price: 4399,
-        category:"Women"
       },
-      //
+      
 ]
 
-export default watches;
+export default mobile;

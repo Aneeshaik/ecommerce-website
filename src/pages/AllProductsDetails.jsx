@@ -1,16 +1,27 @@
 import { useLocation, Link } from "react-router-dom";
 import StarRating from "../components/StarRating";
 import { Heart } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 
 const AllProductsDetails = () => {
   const { state } = useLocation();
   const products = state?.products || [];
+  const subcategories = state?.subcategories || [];
   const title = state?.title || "All Products";
-
+  const [items, setItems] = useState(products);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const changeCategory = (title) => {
+    if(title==="All"){
+      setItems(products);
+      return;
+    }else{
+      const filteredItems = products.filter(item=>(item.category===title || item.category==="None"));
+      setItems(filteredItems)
+    }
+  }
 
   return (
     <div>
@@ -18,8 +29,22 @@ const AllProductsDetails = () => {
         <p>{title}</p>
       </div>
 
-      <div className="grid w-full gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {products.map((product) => (
+       {subcategories && 
+       (<div className="flex flex-row gap-6" >
+          {subcategories.map(({title,image},index)=>(
+            <div className="flex flex-col items-center" onClick={()=>changeCategory(title)}>
+              <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full overflow-hidden">
+                <img src={image} className="max-w-full h-auto object-cover"/>
+              </div>
+              
+              <p>{title}</p>
+            </div>
+          ))}
+          
+       </div>)
+      }
+      <div className="grid w-full h-full gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {items.map((product) => (
           <Link
             to="/productDetails"
             state={{ product }}

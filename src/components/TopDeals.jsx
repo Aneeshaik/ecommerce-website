@@ -8,6 +8,7 @@ import Sneakers from "../assets/products/sneakers.jpg";
 import Sofa from "../assets/products/sofa.jpg";
 
 
+
 const products = [
   {
     id: 1,
