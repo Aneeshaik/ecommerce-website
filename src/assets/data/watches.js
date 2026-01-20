@@ -46,7 +46,8 @@ import watch10_3 from '../products/watches/watch10_3.jpg';
 const watches = [
     {
         id: 1,
-        title: "Noise Pro 6R 1.46\" AMOLED Smart Watch, 1000 NITS, Powered by AI Pro, Built-in GPS, Strava Integration, Stainless Steel Dial, Video Watch Faces, 3ATM, Emergency SOS, TWS Connectivity - Starlight Gold",
+        title: "Noise Pro 6R",
+        info: " 1.46\" AMOLED Smart Watch, 1000 NITS, Powered by AI Pro, Built-in GPS, Strava Integration, Stainless Steel Dial, Video Watch Faces, 3ATM, Emergency SOS, TWS Connectivity - Starlight Gold",
         images: [watch1,watch1_1,watch1_2,watch1_3,watch1_4,watch1_5],
         rating: 4.5,
         reviews: 120,
@@ -55,7 +56,8 @@ const watches = [
       },
       {
         id: 2,
-        title: "Fire-Boltt Axiom Round Smart Watch 1.43″ Super AMOLED Display with Always‑On Mode, Bluetooth Calling, Rotating Crown, SPO₂ & Heart Rate Monitor, IP67 Waterproof Silicone Smartwatch for Men - White",
+        title: "Fire-Boltt Axiom ",
+        info: "Round Smart Watch 1.43″ Super AMOLED Display with Always‑On Mode, Bluetooth Calling, Rotating Crown, SPO₂ & Heart Rate Monitor, IP67 Waterproof Silicone Smartwatch for Men - White",
         images: [watch2_1,watch2_2,watch2_3,watch2_4,watch2_5],
         rating: 3.9,
         reviews: 1049,
@@ -64,7 +66,8 @@ const watches = [
       },
       {
         id: 3,
-        title: "AMERICANVIBER Modern Analog Watch, Silver and Black Two-Tone Stainless Steel Band, Octagonal Case, White Dial for Men",
+        title: "AMERICANVIBER Modern Analog Watch",
+        info: ", Silver and Black Two-Tone Stainless Steel Band, Octagonal Case, White Dial for Men",
         images: [watch3_1,watch3_2,watch3_3],
         rating: 4.0,
         reviews: 153,
@@ -73,7 +76,8 @@ const watches = [
       },
       {
         id: 4,
-        title: "Titan Workwear Quartz Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
+        title: "Titan Workwear Quartz",
+        info: " Multifunction Black Dial Black Metal Strap Watch For Men - NT1805NM02",
         images: [watch4,watch4_2,watch4_3],
         rating: 4.2,
         reviews: 398,
@@ -82,7 +86,8 @@ const watches = [
       },
       {
         id: 5,
-        title: "Noise Twist Go Round dial Smartwatch with BT Calling, 1.39\" Display, Metal Build, 100+ Watch Faces, IP68, Sleep Tracking, 100+ Sports Modes, 24/7 Heart Rate Monitoring (Rose Pink) ",
+        title: "Noise Twist Go ",
+        info: "Round dial Smartwatch with BT Calling, 1.39\" Display, Metal Build, 100+ Watch Faces, IP68, Sleep Tracking, 100+ Sports Modes, 24/7 Heart Rate Monitoring (Rose Pink) ",
         images: [watch5_1,watch5_2,watch5_3],
         rating: 3.9,
         reviews: 50398,
@@ -91,7 +96,8 @@ const watches = [
       },
       {
         id: 6,
-        title: "Noise Pro 6 Smart Watch:Intelligent AI, Endless AI Watch Faces, AI Companion, 1.85” AMOLED, EN2 Processor, Nebula UI 2.0, Emergency SOS, Compatible with iOS & Android(Magnetic Lime) ",
+        title: "Noise Pro 6 ",
+        info: "Smart Watch:Intelligent AI, Endless AI Watch Faces, AI Companion, 1.85” AMOLED, EN2 Processor, Nebula UI 2.0, Emergency SOS, Compatible with iOS & Android(Magnetic Lime) ",
         images: [watch6_1,watch6_2,watch6_3],
         rating: 4.0,
         reviews: 23398,
@@ -100,7 +106,8 @@ const watches = [
       },
       {
         id: 7,
-        title: "Noise Endeavour Pro Outdoor Rugged Military Smart Watch, Titanium Alloy Bezel, Dual-Band GPS, 164ft Water Resistance, 28 Days Battery on Standby, AI Companion, for iOS & Android (Carbon Black)",
+        title: "Noise Endeavour Pro ",
+        info: "Outdoor Rugged Military Smart Watch, Titanium Alloy Bezel, Dual-Band GPS, 164ft Water Resistance, 28 Days Battery on Standby, AI Companion, for iOS & Android (Carbon Black)",
         images: [watch7_1,watch7_2,watch7_3],
         rating: 4.0,
         reviews: 2336,
@@ -110,7 +117,8 @@ const watches = [
 
       {
         id: 8,
-        title: "Google Pixel Watch 3 (45mm) 2024 Model - Android Smartwatch, Heart Rate Tracking, Fitbit Advanced Running, Fitness Insights, 24-Hour Battery - Matte Hazel Aluminum Case - Hazel Band - LTE ",
+        title: "Google Pixel Watch  ",
+        info: "3 (45mm) 2024 Model - Android Smartwatch, Heart Rate Tracking, Fitbit Advanced Running, Fitness Insights, 24-Hour Battery - Matte Hazel Aluminum Case - Hazel Band - LTE",
         images: [watch8_1,watch8_2,watch8_3],
         rating: 4.4,
         reviews: 1798,
@@ -119,7 +127,8 @@ const watches = [
       },
       {
         id: 9,
-        title: "Noise Colorfit Pro 5 Smart Watch 1.85\" AMOLED Display, BT Calling, New DIY Watch Faces, Smart Dock Design, Emergency SOS Tech, Emoji Support, 5X Faster Data Transfer, Instacharge?? (Starlight Gold) ",
+        title: "Noise Colorfit Pro ",
+        info: "5 Smart Watch 1.85\" AMOLED Display, BT Calling, New DIY Watch Faces, Smart Dock Design, Emergency SOS Tech, Emoji Support, 5X Faster Data Transfer, Instacharge?? (Starlight Gold) ",
         images: [watch9_1,watch9_2,watch9_3],
         rating: 4.0,
         reviews: 12398,
@@ -128,7 +137,8 @@ const watches = [
       },
       {
         id: 10,
-        title: "Fastrack Sleek 1.32\" AMOLED 42mm Round Display Smart Watch with Silicone Strap, QR Hub, BT Calling, SPO2, Hotkey, Functional Crown, IP68 Water Resistant Upto, 5 Days Battery Life - Dusty Rose",
+        title: "Fastrack Sleek ",
+        info: "1.32\" AMOLED 42mm Round Display Smart Watch with Silicone Strap, QR Hub, BT Calling, SPO2, Hotkey, Functional Crown, IP68 Water Resistant Upto, 5 Days Battery Life - Dusty Rose",
         images: [watch10_1,watch10_2,watch10_3],
         rating: 2.9,
         reviews: 7,

@@ -40,7 +40,8 @@ import m10_3 from '../products/mobile/m10_3.jpg';
 const mobile = [
     {
         id: 1,
-        title: "vivo X300 5G (Mist Blue, 12GB RAM, 256GB Storage) with No Cost EMI/Additional Exchange Offers",
+        title: "vivo X300 5G",
+        info:"(Mist Blue, 12GB RAM, 256GB Storage) with No Cost EMI/Additional Exchange Offers",
         images: [m1_1,m1_2,m1_3],
         rating: 4.6,
         reviews: 111,
@@ -48,7 +49,8 @@ const mobile = [
       },
       {
         id: 2,
-        title: "POCO C71, Desert Gold (6GB, 128GB)",
+        title: "POCO C71",
+        info:"Desert Gold (6GB, 128GB)",
         images: [m2_1,m2_2,m2_3],
         rating: 4.0,
         reviews: 3000,
@@ -56,7 +58,8 @@ const mobile = [
       },
       {
         id: 3,
-        title: "Redmi A4 5G (Starry Black, 6GB RAM, 128GB Storage) | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging | Charger in The Box",
+        title: "Redmi A4 5G",
+        info:"(Starry Black, 6GB RAM, 128GB Storage) | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging | Charger in The Box",
         images: [m3_1,m3_2,m3_3],
         rating: 4.0,
         reviews: 11353,
@@ -64,7 +67,8 @@ const mobile = [
       },
       {
         id: 4,
-        title: "iPhone 16 Plus 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Pink",
+        title: "iPhone 16 Plus",
+        info: "128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Pink",
         images: [m4_1,m4_2,m4_3],
         rating: 4.6,
         reviews: 727,
@@ -72,7 +76,8 @@ const mobile = [
       },
       {
         id: 5,
-        title: "Samsung Galaxy S25 Ultra 5G Mobile with Galaxy AI (Titanium Silverblue,12GB RAM, 256GB Storage),Titanium Frame,Ultra Gaming with Snapdragon 8 Elite,200MP Camera with ProVisual Engine,5000mAh Battery",
+        title: "Samsung Galaxy S25 Ultra",
+        info:"5G Mobile with Galaxy AI (Titanium Silverblue,12GB RAM, 256GB Storage),Titanium Frame,Ultra Gaming with Snapdragon 8 Elite,200MP Camera with ProVisual Engine,5000mAh Battery",
         images: [m5_1,m5_2,m5_3],
         rating: 4.3,
         reviews:  868,
@@ -80,7 +85,8 @@ const mobile = [
       },
       {
         id: 6,
-        title: "Samsung Galaxy Z Flip4 5G (Light Blue, 8GB RAM, 256GB Storage)",
+        title: "Samsung Galaxy Z Flip4 5G ",
+        info :"(Light Blue, 8GB RAM, 256GB Storage)",
         images: [m6_1,m6_2,m6_3],
         rating: 2.2,
         reviews: 22,
@@ -88,7 +94,8 @@ const mobile = [
       },
       {
         id: 7,
-        title: "Motorola Moto g06 Power (Pantone Tendril, 4GB RAM, 64GB Storage) | 7000mAh Battery | 6.88\" 120Hz HD+ Display | 50MP Camera | Android 15 | MediaTek Helio G81 | IP64 | Gorilla Glass 3",
+        title: "Motorola Moto g06 Power",
+        info: "(Pantone Tendril, 4GB RAM, 64GB Storage) | 7000mAh Battery | 6.88\" 120Hz HD+ Display | 50MP Camera | Android 15 | MediaTek Helio G81 | IP64 | Gorilla Glass 3",
         images: [m7_1],
         rating: 3.8,
         reviews: 27,
@@ -97,7 +104,8 @@ const mobile = [
 
       {
         id: 8,
-        title: "OnePlus 13s | Snapdragon 8 Elite | Best Battery Life Ever on a Compact Phone | Studio-Grade Detail with Triple AF Cameras | Lifetime Display Warranty | 12GB+512GB | Green Silk",
+        title: "OnePlus 13s",
+        info: " | Snapdragon 8 Elite | Best Battery Life Ever on a Compact Phone | Studio-Grade Detail with Triple AF Cameras | Lifetime Display Warranty | 12GB+512GB | Green Silk",
         images: [m8_1,m8_2,m8_3],
         rating: 4.5,
         reviews: 1646,
@@ -105,7 +113,8 @@ const mobile = [
       },
       {
         id: 9,
-        title: "Redmi Note 14 Pro 5G Ivy Green 8GB RAM 256GB Storage|50 MP Sony Camera Setup|Corning Gorilla Glass Victus 2 | 1.5K 3D Curved AMOLED | Mediatek Dimensity 7300- Ultra",
+        title: "Redmi Note 14 Pro",
+        info: "5G Ivy Green 8GB RAM 256GB Storage|50 MP Sony Camera Setup|Corning Gorilla Glass Victus 2 | 1.5K 3D Curved AMOLED | Mediatek Dimensity 7300- Ultra5G Ivy Green 8GB RAM 256GB Storage|50 MP Sony Camera Setup|Corning Gorilla Glass Victus 2 | 1.5K 3D Curved AMOLED | Mediatek Dimensity 7300- Ultra",
         images: [m9_1,m9_2,m9_3],
         rating: 4.1,
         reviews: 398,
@@ -113,7 +122,8 @@ const mobile = [
       },
       {
         id: 10,
-        title: "Redmi A3X Ocean Green 4GB RAM 128GB ROM",
+        title: "Redmi A3X",
+        info : "Ocean Green 4GB RAM 128GB ROM",
         images: [m10_1,m10_2,m10_3],
         rating: 4.0,
         reviews: 118,

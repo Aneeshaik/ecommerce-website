@@ -5,9 +5,11 @@ import { Link, useLocation } from "react-router-dom";
 const ProductDetails = () => {
   const { state } = useLocation();
   const product = state?.product;
+  const category = state?.title;
 
   const {
     title,
+    info,
     images,
     rating,
     reviews,
@@ -26,8 +28,15 @@ const ProductDetails = () => {
 
   return (
     <>
+      <div className="flex flex-row justify-start my-2">
+        <p>Home/ {category}/ {title}</p>
+      </div>
+     
       <div className="flex gap-16 w-full text-black my-4 min-h-screen">
+
+       
         <div className="grid grid-cols-[auto_1fr] gap-4">
+          
           <div className="flex flex-col gap-3 w-24">
             {images?.map((img, index) => (
               <img
@@ -62,7 +71,7 @@ const ProductDetails = () => {
 
         {/* DETAILS SECTION */}
         <div className="flex flex-col items-start w-[50%] gap-4">
-          <p className="text-left text-2xl font-semibold mt-4">{title}</p>
+          <p className="text-left text-2xl font-semibold mt-4">{title}{info}</p>
 
           <div className="flex items-center gap-1">
             <Star size={16} className="fill-[#018FFF] text-[#018FFF]" />

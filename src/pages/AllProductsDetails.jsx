@@ -47,7 +47,7 @@ const AllProductsDetails = () => {
         {items.map((product) => (
           <Link
             to="/productDetails"
-            state={{ product }}
+            state={{ product,title }}
             key={product.id}
           >
             <div>
