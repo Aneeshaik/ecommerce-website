@@ -43,7 +43,7 @@ const AllProductsDetails = () => {
           
        </div>)
       }
-      <div className="grid w-full h-full gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="grid w-full h-[500px] gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 overflow-y-scroll">
         {items.map((product) => (
           <Link
             to="/productDetails"

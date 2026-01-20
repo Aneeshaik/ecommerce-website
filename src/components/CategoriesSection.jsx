@@ -10,7 +10,8 @@ import laptopAccessories from "../assets/categories/laptop-accessories.png";
 import mobileAccessories from "../assets/categories/mobile-accessories.png";
 import bluetooth from "../assets/categories/bluetooth.png";
 import wallClock from "../assets/categories/wall-clock.png";
-import watches from "../assets/data/watches.js"
+import watches from "../assets/data/watches.js";
+import mobiles from "../assets/data/mobile.js";
 const categories = [
   {
     id: 1,
@@ -33,31 +34,37 @@ const categories = [
     id: 2,
     title: "Mobile & Accessories",
     image: mobile,
+    products:mobiles
   },
   {
     id: 3,
     title: "WallClocks",
     image: wallClock,
+    products:watches
   },
   {
     id: 4,
     title: "Computers & Laptops",
     image: laptops,
+    products:watches
   },
   {
     id: 5,
     title: "Laptop Accessories",
     image: laptopAccessories,
+    products:watches
   },
   {
     id: 6,
     title: "Mobile Accessories",
     image: mobileAccessories,
+    products:watches
   },
   {
     id: 7,
     title: "Bluetooth",
     image: bluetooth,
+    products:watches
   },
 ];
 
