@@ -67,7 +67,7 @@ const OrderSummary = ({product}) => {
                 </div>
             </div>
         </div>
-        <button type="button" className="w-full rounded-xl bg-blue  py-2"> Check Out</button>
+        <button type="button" className="w-full rounded-xl bg-blue-500  text-white py-2"> Check Out</button>
         <div className="flex justify-center">
           <p className="text-gray-500 text-xs">Purchase protected by emos Money Bank Quarantee</p>
         </div>

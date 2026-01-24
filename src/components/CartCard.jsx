@@ -56,12 +56,13 @@ import { Heart, Minus, Plus, Trash, Truck, Undo2 } from "lucide-react";
 const CartCard = ({ product }) => {
     const {
         title,
+        info,
         images,
         price,
     } = product;
 
     return (
-        <div className="relative flex items-start gap-3 text-black w-[70%] border-2 border-gray-200 rounded-2xl p-4">
+        <div className="relative flex items-start gap-3 text-black border-1 border-gray-100 bg-gray-100 rounded-2xl p-4">
             <div className="w-32 h-32 bg-[#F2F3F9] p-4 rounded-2xl mb-4 flex gap-4">
                 <img src={images[0]} alt={title} className="w-full h-full object-contain" />
             </div>

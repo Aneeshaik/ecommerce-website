@@ -21,7 +21,7 @@ export default Cart*/}
 
 import { useLocation } from "react-router-dom"
 import {useState, useEffect} from "react";
-import CartCard from "../components/CardCard"
+import CartCard from "../components/CartCard"
 import OrderSummary from "../components/OrderSummary"
 
 const Cart = () => {

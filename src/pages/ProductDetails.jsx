@@ -90,6 +90,11 @@ const ProductDetails = () => {
           >
             Add to cart
           </Link>
+          <Link to='/checkout'
+          state={{ product }}
+          className="bg-[#018FFF] w-full text-white p-2 rounded-3xl cursor-pointer text-center">
+            Buy Now
+          </Link>
         </div>
       </div>
 

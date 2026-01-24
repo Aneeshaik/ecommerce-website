@@ -12,6 +12,8 @@ import bluetooth from "../assets/categories/bluetooth.png";
 import wallClock from "../assets/categories/wall-clock.png";
 import watches from "../assets/data/watches.js";
 import mobiles from "../assets/data/mobile.js";
+import wallclock from "../assets/data/wallclock.js";
+import laptop from "../assets/data/laptop.js";
 const categories = [
   {
     id: 1,
@@ -40,13 +42,13 @@ const categories = [
     id: 3,
     title: "WallClocks",
     image: wallClock,
-    products:watches
+    products:wallclock
   },
   {
     id: 4,
     title: "Computers & Laptops",
     image: laptops,
-    products:watches
+    products:laptop
   },
   {
     id: 5,
