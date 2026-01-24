@@ -43,7 +43,8 @@ const Cart = () => {
             <div className="text-black text-left text-2xl font-semibold">Shopping Cart</div>
             {cartProducts.map((product,index)=>(
                 <div key={index} className="flex items-start  mt-4  gap-4">
-                <CartCard product={ product } />
+                <div className="flex-1"> <CartCard product={ product } /></div>
+               
                 <OrderSummary product={ product }/>
                 </div>
             ))}

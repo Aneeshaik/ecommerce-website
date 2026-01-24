@@ -25,10 +25,11 @@ const Checkout = () => {
                                 
                                 <Pencil onClick={()=>setEditing(true)}/>
                             </div>
+                            <p className="text-left">Delivery to </p>
                             {!editing?
                              <p className="text-left">{address}</p>
                              :
-                             <div className="flex gap-2"><p className="text-left">Delivery to </p>
+                             <div className="flex gap-2">
                             <div className="flex justify-left gap-2">
                                 <input type="text" value={address} onChange={e=>setAddress(e.target.value)} className="border-2" />
                                 
