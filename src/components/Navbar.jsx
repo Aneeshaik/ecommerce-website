@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import blackLogo from '../assets/logo-black.png'
 import { MapPin, Search, ShoppingCart, CircleUserRound } from 'lucide-react'
-
+import {useNavigate} from 'react-router-dom'
 const Navbar = () => {
+    const navigate = useNavigate()
+    const isLoggedIn = !!localStorage.getItem('token')
+    const logout = () => {
+        localStorage.removeItem('token')
+        navigate('/auth/signin')
+    }
     return (
         <div className="py-2 sticky top-0 z-50 flex items-center justify-between bg-white mx-32">
             <img src={blackLogo} alt="Wearly Logo" className="w-32 "/>
@@ -31,13 +37,14 @@ const Navbar = () => {
                     <ShoppingCart size={20} className='text-black' />
                     <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
-                <Link
-                    to="/#"
+                
+                    {isLoggedIn? <span className="text-sm font-medium text-black cursor-pointer" onClick={logout}>Logout</span>  :                    <Link
+                    to="/auth/signin"
                     className="flex items-center gap-1"
-                >
-                    <CircleUserRound size={20} className='text-black' />
-                    <span className="text-sm font-medium text-black">Sign In</span>
-                </Link>
+                ><CircleUserRound size={20} className='text-black cursor-pointer' />
+<span className="text-sm font-medium text-black">Sign In</span></Link>}
+
+                
             </div>
         </div>
     )
