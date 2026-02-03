@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 
+
 const SignIn = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -14,12 +15,14 @@ const SignIn = () => {
       headers: {
         'Content-Type': 'application/json',
       },
+      credentials: 'include',
       body: JSON.stringify({email, password}),
     })
 
     if (response.ok) {
       const data = await response.json()
-      localStorage.setItem('token', data.token)
+
+      
       navigate('/')
     }
 

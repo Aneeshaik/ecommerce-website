@@ -1,25 +1,56 @@
 import { Link } from 'react-router-dom'
 import blackLogo from '../assets/logo-black.png'
-import { MapPin, Search, ShoppingCart, CircleUserRound } from 'lucide-react'
-import {useNavigate} from 'react-router-dom'
+import { MapPin, Search, ShoppingCart, CircleUserRound, } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+
 const Navbar = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [name, setName] = useState("")
     const navigate = useNavigate()
-    const isLoggedIn = !!localStorage.getItem('token')
-    const logout = () => {
-        localStorage.removeItem('token')
+
+useEffect(() => {
+  const fetchLoggedInDetails = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/auth/me', {
+        credentials: 'include',
+      })
+      console.log(response.ok)
+      if (response.ok) {
+        const data = await response.json()
+        setIsLoggedIn(data.loggedIn)
+        setName(data.user.name)
+      } 
+    } catch (error) {
+      setIsLoggedIn(false)
+    }
+  }
+
+  fetchLoggedInDetails()
+}, []) // ✅ run ONLY once on mount
+
+
+    const logout = async () => {
+        await fetch('http://localhost:5000/auth/logout', {
+            method: 'POST',
+            credentials: 'include',
+        })
+        setIsLoggedIn(false)
         navigate('/auth/signin')
     }
+
+
     return (
         <div className="py-2 sticky top-0 z-50 flex items-center justify-between bg-white mx-32">
-            <img src={blackLogo} alt="Wearly Logo" className="w-32 "/>
+            <img src={blackLogo} alt="Wearly Logo" className="w-32 " />
             <div className='relative w-125'>
-                <input 
+                <input
                     type="text"
-                    placeholder="Search for products, brands and more" 
+                    placeholder="Search for products, brands and more"
                     className="w-full p-2 bg-[#F2F3F7] rounded-4xl mx-auto text-black text-sm focus:outline-none"
                 />
                 <div className='absolute right-1 bg-[#018FFF] rounded-full p-1 top-1/2 transform -translate-y-1/2'>
-                    <Search size={18}/>
+                    <Search size={18} />
                 </div>
             </div>
             <div className='flex items-center gap-6'>
@@ -37,14 +68,14 @@ const Navbar = () => {
                     <ShoppingCart size={20} className='text-black' />
                     <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
-                
-                    {isLoggedIn? <span className="text-sm font-medium text-black cursor-pointer" onClick={logout}>Logout</span>  :                    <Link
+
+                {isLoggedIn ? <span className="text-sm font-medium text-black cursor-pointer" onClick={logout}><CircleUserRound /> Hello, {name}</span> : <Link
                     to="/auth/signin"
                     className="flex items-center gap-1"
                 ><CircleUserRound size={20} className='text-black cursor-pointer' />
-<span className="text-sm font-medium text-black">Sign In</span></Link>}
+                    <span className="text-sm font-medium text-black">Sign In</span></Link>}
 
-                
+
             </div>
         </div>
     )
