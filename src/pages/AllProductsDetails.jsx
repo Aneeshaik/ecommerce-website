@@ -4,14 +4,25 @@ import { Heart } from "lucide-react";
 import { useEffect,useState } from "react";
 
 const AllProductsDetails = () => {
+  
   const { state } = useLocation();
-  const products = state?.products || [];
   const subcategories = state?.subcategories || [];
   const title = state?.title || "All Products";
-  const [items, setItems] = useState(products);
+  const [items, setItems] = useState([]);
+  const [products,setProducts] = useState([])
   useEffect(() => {
+    const fetchProducts = async() => {
+      const response = await fetch(`http://localhost:5000/api/products?category=${title}`)
+      if(response.ok){
+        const result = await response.json()
+        setProducts(result.data)
+        setItems(result.data)
+      }
+    }
+    fetchProducts()
     window.scrollTo(0, 0);
-  }, []);
+
+  }, [title]);
 
   const changeCategory = (title) => {
     if(title==="All"){
@@ -32,9 +43,13 @@ const AllProductsDetails = () => {
        {subcategories && 
        (<div className="flex flex-row gap-6" >
           {subcategories.map(({title,image},index)=>(
-            <div className="flex flex-col items-center" onClick={()=>changeCategory(title)}>
+            <div key={index} className="flex flex-col items-center" onClick={()=>changeCategory(title)}>
               <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full overflow-hidden">
-                <img src={image} className="max-w-full h-auto object-cover"/>
+<img
+  src={`http://localhost:5000${image}`}
+  className="w-full h-full object-cover"
+/>
+
               </div>
               
               <p>{title}</p>
@@ -46,9 +61,9 @@ const AllProductsDetails = () => {
       <div className="grid w-full h-[500px] gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 overflow-y-scroll">
         {items.map((product) => (
           <Link
-            to="/productDetails"
-            state={{ product,title }}
-            key={product.id}
+            to={`/productDetails/${product._id}`}
+            
+            key={product._id}
           >
             <div>
               <div className="relative w-full h-52 rounded-xl flex items-center justify-center">
@@ -58,12 +73,10 @@ const AllProductsDetails = () => {
                     className="text-gray-700 group-hover:text-red-500 group-hover:fill-red-500 transition"
                   />
                 </div>
+                <img src={`http://localhost:5000${product.images[0]}`}                   alt={product.title}
+                  className="object-contain w-full h-full rounded-xl bg-[#F2F3F9]"/>
 
-                <img
-                  src={product.images[0]}
-                  alt={product.title}
-                  className="object-contain w-full h-full rounded-xl bg-[#F2F3F9]"
-                />
+       
               </div>
 
               <div className="flex flex-col items-start w-full space-y-1">

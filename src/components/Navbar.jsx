@@ -69,7 +69,7 @@ useEffect(() => {
                     <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
 
-                {isLoggedIn ? <span className="text-sm font-medium text-black cursor-pointer" onClick={logout}><CircleUserRound /> Hello, {name}</span> : <Link
+                {isLoggedIn ? <span className=" flex flex-row gap-1 text-sm font-medium text-black cursor-pointer" onClick={logout}><CircleUserRound /> Hello, {name}</span> : <Link
                     to="/auth/signin"
                     className="flex items-center gap-1"
                 ><CircleUserRound size={20} className='text-black cursor-pointer' />

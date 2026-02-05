@@ -1,47 +1,75 @@
 import { Heart, Star } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
-  const { state } = useLocation();
-  const product = state?.product;
-  const category = state?.title;
+  const { id } = useParams()
 
-  const {
-    title,
-    info,
-    images,
-    rating,
-    reviews,
-    price,
-  } = product;
+  const [product, setProduct] = useState({})
+
+  const { title, info, images, rating, reviewsCount, price, category } = product
 
   const [activeImage, setActiveImage] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
 
   useEffect(() => {
+    const fetchProduct = async () => {
+      const response = await fetch(`http://localhost:5000/api/products/${id}`)
+      console.log("fetchProduct", response.ok)
+      if (response.ok) {
+        const result = await response.json()
+        const item = result.data
+        setProduct(item)
+      }
+    }
+    fetchProduct()
     window.scrollTo(0, 0);
-    setActiveImage(images[0]);
-  }, [images]);
 
-  if (!product) return null;
+  }, [id]);
+
+  useEffect(() => {
+    if (product?.images?.length) {
+      setActiveImage(product.images[0]);
+    }
+  }, [product]);
+
+
+  const addToCart = async () => {
+    const response = await fetch('http://localhost:5000/api/cart/add', {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        productId: product._id,
+        quantity: 1
+      })
+    });
+    if(response.ok) {
+      console.log("Added to Cart")
+    }
+  }
+
+
+
 
   return (
     <>
       <div className="flex flex-row justify-start my-2">
         <p>Home/ {category}/ {title}</p>
       </div>
-     
+
       <div className="flex gap-16 w-full text-black my-4 min-h-screen">
 
-       
+
         <div className="grid grid-cols-[auto_1fr] gap-4">
-          
+
           <div className="flex flex-col gap-3 w-24">
             {images?.map((img, index) => (
               <img
                 key={index}
-                src={img}
+                src={`http://localhost:5000${img}`}
                 alt="thumbnail"
                 onClick={() => setActiveImage(img)}
                 className={`w-20 h-20 object-contain border rounded-lg cursor-pointer p-1
@@ -60,7 +88,7 @@ const ProductDetails = () => {
             </div>
 
             <img
-              src={activeImage}
+              src={`http://localhost:5000${activeImage}`}
               alt={title}
               className="w-[50%]  object-cover  cursor-zoom-in"
               onClick={() => setPreviewImage(activeImage)}
@@ -76,23 +104,23 @@ const ProductDetails = () => {
           <div className="flex items-center gap-1">
             <Star size={16} className="fill-[#018FFF] text-[#018FFF]" />
             <p>{rating}</p>
-            <p>({reviews})</p>
+            <p>({reviewsCount})</p>
           </div>
 
           <p className="font-semibold text-3xl text-black">
             &#8377;{price}
           </p>
-            
-          <Link
-            to="/cart"
-            state={{ product }}
+
+          <button
+
+            onClick={addToCart}
             className="bg-[#018FFF] w-full text-white p-2 rounded-3xl cursor-pointer text-center"
           >
             Add to cart
-          </Link>
+          </button>
           <Link to='/checkout'
-          state={{ product }}
-          className="bg-[#018FFF] w-full text-white p-2 rounded-3xl cursor-pointer text-center">
+            state={{ product }}
+            className="bg-[#018FFF] w-full text-white p-2 rounded-3xl cursor-pointer text-center">
             Buy Now
           </Link>
         </div>

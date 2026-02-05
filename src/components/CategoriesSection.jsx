@@ -1,76 +1,20 @@
 import { ChevronRight } from 'lucide-react';
 import CategoryCard from "./CategoryCard.jsx";
-import mobile from "../assets/categories/mobile.png";
-import laptops from "../assets/categories/laptop.png";
-import wearables from "../assets/categories/watches/watch.png";
-import watchAll from "../assets/categories/watches/watchAll.jpg";
-import watchMen from "../assets/categories/watches/watchMen.jpg";
-import watchWomen from "../assets/categories/watches/watchWomen.jpg";
-import laptopAccessories from "../assets/categories/laptop-accessories.png";
-import mobileAccessories from "../assets/categories/mobile-accessories.png";
-import bluetooth from "../assets/categories/bluetooth.png";
-import wallClock from "../assets/categories/wall-clock.png";
-import watches from "../assets/data/watches.js";
-import mobiles from "../assets/data/mobile.js";
-import wallclock from "../assets/data/wallclock.js";
-import laptop from "../assets/data/laptop.js";
-const categories = [
-  {
-    id: 1,
-    title: "Watches",
-    image: wearables,
-    subcategories:[{
-      title:"All",
-      image:watchAll,
-    },{
-      title:"Men",
-      image:watchMen,
-    },{
-      title:"Women",
-      image:watchWomen,
-    },],
-    products: watches,
-  },
-
-  {
-    id: 2,
-    title: "Mobile & Accessories",
-    image: mobile,
-    products:mobiles
-  },
-  {
-    id: 3,
-    title: "WallClocks",
-    image: wallClock,
-    products:wallclock
-  },
-  {
-    id: 4,
-    title: "Computers & Laptops",
-    image: laptops,
-    products:laptop
-  },
-  {
-    id: 5,
-    title: "Laptop Accessories",
-    image: laptopAccessories,
-    products:watches
-  },
-  {
-    id: 6,
-    title: "Mobile Accessories",
-    image: mobileAccessories,
-    products:watches
-  },
-  {
-    id: 7,
-    title: "Bluetooth",
-    image: bluetooth,
-    products:watches
-  },
-];
+import {useEffect, useState} from 'react'
 
 const CategoriesSection = () => {
+    const [categories,setCategories] = useState([])
+    useEffect(()=>{
+      const fetchCategories = async() => {
+        const response = await fetch('http://localhost:5000/api/categories')
+        if(response.ok){
+          const result = await response.json()
+          
+          setCategories(result.data)
+        }
+      }
+      fetchCategories()
+    },[])
     return (
         <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-between'>
@@ -85,10 +29,9 @@ const CategoriesSection = () => {
             }} className='flex gap-14 items-start overflow-x-auto'>
               {categories.map((item) => (
                 <CategoryCard
-                  key={item.id}
+                  key={item._id}
                   title={item.title}
-                  image={item.image}
-                  products={item.products || []}
+                    image={`http://localhost:5000${item.image}`}
                   subcategories={item.subcategories}
                 />
               ))}

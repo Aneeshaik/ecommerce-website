@@ -64,7 +64,7 @@ const CartCard = ({ product }) => {
     return (
         <div className="relative flex items-start gap-3 text-black border-1 border-gray-100 bg-gray-100 rounded-2xl p-4">
             <div className="w-32 h-32 bg-[#F2F3F9] p-4 rounded-2xl mb-4 flex gap-4">
-                <img src={images[0]} alt={title} className="w-full h-full object-contain" />
+                <img src={`http://localhost:5000${images[0]}`} alt={title} className="w-full h-full object-contain" />
             </div>
             <div className="flex-1 flex items-start justify-between">
                 <div className="flex flex-col gap-1 items-start">

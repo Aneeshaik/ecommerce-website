@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import MainLayout from "../layouts/MainLayout";
+import ProtectedRoute from '../components/ProtectedRoute'
 
 const Home = lazy(() => import("../pages/Home"));
 const ProductDetails = lazy(() => import("../pages/ProductDetails"));
@@ -15,10 +16,15 @@ export const routes = [
         element: <MainLayout />,
         children: [
             { index: true, element: <Home /> },
-            { path: 'productDetails', element: <ProductDetails /> },
+            { path: 'productDetails/:id', element: <ProductDetails /> },
             { path: 'allproductsDetails', element: <AllProductsDetails /> },
-            { path: 'cart', element: <Cart /> },
-            { path: 'checkout', element: <Checkout /> }
+            {
+              element: <ProtectedRoute />,
+              children: [
+                { path: 'cart', element: <Cart /> },
+                { path: 'checkout', element: <Checkout /> }
+              ]
+            }
         ]
     },
     {
