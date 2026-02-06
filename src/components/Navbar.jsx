@@ -3,11 +3,14 @@ import blackLogo from '../assets/logo-black.png'
 import { MapPin, Search, ShoppingCart, CircleUserRound, } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import {useSelector} from 'react-redux'
+import { selectCartQuantity } from "../store/cartSlice";
 
 const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [name, setName] = useState("")
     const navigate = useNavigate()
+const quantity = useSelector(selectCartQuantity);
 
 useEffect(() => {
   const fetchLoggedInDetails = async () => {
@@ -66,6 +69,7 @@ useEffect(() => {
                     className="flex items-center gap-1"
                 >
                     <ShoppingCart size={20} className='text-black' />
+                   <span>{quantity}</span>
                     <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
 

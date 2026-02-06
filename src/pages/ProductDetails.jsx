@@ -1,6 +1,8 @@
 import { Heart, Star } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams} from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCart } from "../store/cartSlice";
 
 const ProductDetails = () => {
   const { id } = useParams()
@@ -11,11 +13,13 @@ const ProductDetails = () => {
 
   const [activeImage, setActiveImage] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
+  
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchProduct = async () => {
       const response = await fetch(`http://localhost:5000/api/products/${id}`)
-      console.log("fetchProduct", response.ok)
+      
       if (response.ok) {
         const result = await response.json()
         const item = result.data
@@ -47,6 +51,18 @@ const ProductDetails = () => {
       })
     });
     if(response.ok) {
+      const data = await response.json()
+       const formattedItems = data.items.map(item => ({
+    product: {
+      _id: item.product._id,
+      title: item.product.title,
+      price: item.product.price,
+      images: item.product.images,
+    },
+    quantity: item.quantity,
+  }));
+      dispatch(setCart(formattedItems));
+    
       console.log("Added to Cart")
     }
   }

@@ -1,5 +1,6 @@
 import { Tag, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 
 const OrderSummary = ({ items = [] }) => {
   const [total, setTotal] = useState(0);
@@ -69,10 +70,11 @@ const OrderSummary = ({ items = [] }) => {
           <p>Sub Total</p>
           <p>₹{total}</p>
         </div>
-
+       
         <button className="w-full rounded-xl bg-blue-500 text-white py-2">
           Check Out
         </button>
+       
       </div>
     </div>
   );
