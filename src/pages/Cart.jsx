@@ -81,7 +81,7 @@ If ✅ different reference → re-render*/
     const res = await fetch(
       "http://localhost:5000/api/cart/remove-from-cart",
       {
-        method: "POST",
+        method: "DELETE",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ productId }),

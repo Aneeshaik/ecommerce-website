@@ -7,14 +7,13 @@ const cartSlice = createSlice({
     },
     reducers: {
         setCart(state, action) {
+            console.log(action.type)//cart/setCart
             state.items = action.payload;
         },
         clearCart(state) {
             state.items = [];
         },
-        getTotalQuantity(state, action) {
-
-        }
+        
     },
 });
 
