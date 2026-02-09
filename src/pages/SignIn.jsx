@@ -1,12 +1,12 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import {useNavigate, Link} from 'react-router-dom'
-
+import AuthContext from '../context/AuthContext'
 
 const SignIn = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
-
+  const {setIsAuthenticated} = useContext(AuthContext);
   const onSubmitForm = async e => {
     e.preventDefault()
 
@@ -21,7 +21,7 @@ const SignIn = () => {
 
     if (response.ok) {
       const data = await response.json()
-
+      setIsAuthenticated(true)
       
       navigate('/')
     }

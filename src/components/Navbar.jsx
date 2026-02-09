@@ -2,35 +2,24 @@ import { Link } from 'react-router-dom'
 import blackLogo from '../assets/logo-black.png'
 import { MapPin, Search, ShoppingCart, CircleUserRound, } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import {useSelector} from 'react-redux'
 import { selectCartQuantity } from "../store/cartSlice";
-
+import AuthContext from '../context/AuthContext'
 const Navbar = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [name, setName] = useState("")
+    const {isAuthenticated, user} = useContext(AuthContext)
     const navigate = useNavigate()
-const quantity = useSelector(selectCartQuantity);
+    const quantity = useSelector(selectCartQuantity);
+
+    
+
+
 
 useEffect(() => {
-  const fetchLoggedInDetails = async () => {
-    try {
-      const response = await fetch('http://localhost:5000/auth/me', {
-        credentials: 'include',
-      })
-      console.log(response.ok)
-      if (response.ok) {
-        const data = await response.json()
-        setIsLoggedIn(data.loggedIn)
-        setName(data.user.name)
-      } 
-    } catch (error) {
-      setIsLoggedIn(false)
-    }
-  }
+  console.log('Navbar quantity:', quantity)
+  
+}, [quantity])
 
-  fetchLoggedInDetails()
-}, []) // ✅ run ONLY once on mount
 
 
     const logout = async () => {
@@ -38,7 +27,7 @@ useEffect(() => {
             method: 'POST',
             credentials: 'include',
         })
-        setIsLoggedIn(false)
+       
         navigate('/auth/signin')
     }
 
@@ -69,11 +58,11 @@ useEffect(() => {
                     className="flex items-center gap-1"
                 >
                     <ShoppingCart size={20} className='text-black' />
-                   <span>{quantity}</span>
+                    {quantity > 0 && <span>{quantity}</span>}
                     <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
 
-                {isLoggedIn ? <span className=" flex flex-row gap-1 text-sm font-medium text-black cursor-pointer" onClick={logout}><CircleUserRound /> Hello, {name}</span> : <Link
+                {isAuthenticated ? <span className=" flex flex-row gap-1 text-sm font-medium text-black cursor-pointer" onClick={logout}><CircleUserRound /> Hello, {user}</span> : <Link
                     to="/auth/signin"
                     className="flex items-center gap-1"
                 ><CircleUserRound size={20} className='text-black cursor-pointer' />
@@ -86,6 +75,8 @@ useEffect(() => {
 }
 
 export default Navbar
+
+
 
 /*<header className="w-full bg-white border-b fixed top-0 left-0 z-50">
         <div className='flex items-center justify-between w-full'>
