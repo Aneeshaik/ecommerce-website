@@ -2,15 +2,16 @@ import { Link } from 'react-router-dom'
 import blackLogo from '../assets/logo-black.png'
 import { MapPin, Search, ShoppingCart, CircleUserRound, } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import {useSelector} from 'react-redux'
 import { selectCartQuantity } from "../store/cartSlice";
 import AuthContext from '../context/AuthContext'
+import UserMenu from './UserMenu.jsx'
 const Navbar = () => {
     const {isAuthenticated, user} = useContext(AuthContext)
     const navigate = useNavigate()
     const quantity = useSelector(selectCartQuantity);
-
+    const [searchValue, setSearchValue] = useState("")
     
 
 
@@ -34,16 +35,17 @@ useEffect(() => {
 
     return (
         <div className="py-2 sticky top-0 z-50 flex items-center justify-between bg-white mx-32">
-            <img src={blackLogo} alt="Wearly Logo" className="w-32 " />
+            <Link to="/"><img src={blackLogo} alt="Wearly Logo" className="w-32 " /></Link>
             <div className='relative w-125'>
                 <input
                     type="text"
                     placeholder="Search for products, brands and more"
+                    onChange={e=>setSearchValue(e.target.value)}
                     className="w-full p-2 bg-[#F2F3F7] rounded-4xl mx-auto text-black text-sm focus:outline-none"
                 />
-                <div className='absolute right-1 bg-[#018FFF] rounded-full p-1 top-1/2 transform -translate-y-1/2'>
+                <Link to={`/search?keyword=${searchValue}`} className='absolute right-1 bg-[#018FFF] rounded-full p-1 top-1/2 transform -translate-y-1/2'>
                     <Search size={18} />
-                </div>
+                </Link>
             </div>
             <div className='flex items-center gap-6'>
                 <div className='flex items-center gap-1'>
@@ -62,7 +64,7 @@ useEffect(() => {
                     <span className="text-sm font-medium text-black">Cart</span>
                 </Link>
 
-                {isAuthenticated ? <span className=" flex flex-row gap-1 text-sm font-medium text-black cursor-pointer" onClick={logout}><CircleUserRound /> Hello, {user}</span> : <Link
+                {isAuthenticated ? <UserMenu logout={logout} user={user} /> : <Link
                     to="/auth/signin"
                     className="flex items-center gap-1"
                 ><CircleUserRound size={20} className='text-black cursor-pointer' />

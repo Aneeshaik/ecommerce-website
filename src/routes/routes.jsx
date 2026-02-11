@@ -9,6 +9,8 @@ const AllProductsDetails = lazy(() => import('../pages/AllProductsDetails'));
 const Checkout = lazy(() => import('../pages/Checkout'));
 const SignUp = lazy(() => import('../pages/SignUp'));
 const SignIn = lazy(() => import('../pages/SignIn'));
+const Search = lazy(() => import('../pages/Search'));
+const Wishlist = lazy(() => import('../pages/Wishlist'));
 
 export const routes = [
     {
@@ -18,6 +20,8 @@ export const routes = [
             { index: true, element: <Home /> },
             { path: 'productDetails/:id', element: <ProductDetails /> },
             { path: 'allproductsDetails', element: <AllProductsDetails /> },
+            { path: 'search', element: <Search /> },
+            { path: 'wishlist', element: <Wishlist /> },
             {
               element: <ProtectedRoute />,
               children: [
