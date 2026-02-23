@@ -4,12 +4,11 @@ import {useEffect, useState} from 'react'
 
 const CategoriesSection = () => {
     const [categories,setCategories] = useState([])
-    useEffect(()=>{
+    useEffect(() => {
       const fetchCategories = async() => {
         const response = await fetch('http://localhost:5000/api/categories')
         if(response.ok){
           const result = await response.json()
-          
           setCategories(result.data)
         }
       }
